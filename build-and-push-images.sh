@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-docker login -u bolddevs -p kotletasserveryje
+docker login -u $DOCKER_USERNAME -p $DOCKER_PASWORD
 
 docker image build -t boldadmin/http-runner-from-s3:nginx1.12 ./http-runner-from-s3
 docker push boldadmin/http-runner-from-s3:nginx1.12
