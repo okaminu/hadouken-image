@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASWORD
+docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 docker image build -t boldadmin/http-runner-from-s3:nginx1.12 ./http-runner-from-s3
 docker push boldadmin/http-runner-from-s3:nginx1.12
