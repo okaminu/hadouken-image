@@ -1,5 +1,6 @@
 FROM nginx:1.12
 
+COPY default.conf /etc/nginx/conf.d/default.conf
 WORKDIR /usr/share/nginx/html
 RUN apt update
 RUN apt install awscli=1.11.13-1 -y
