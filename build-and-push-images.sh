@@ -3,8 +3,8 @@
 
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
-docker image build -t boldadmin/http-runner-from-s3:nginx1.12 ./http-runner-from-s3/
-docker push boldadmin/http-runner-from-s3:nginx1.12
+docker image build -t boldadmin/http-runner-from-s3:nginx1.14 ./http-runner-from-s3/
+docker push boldadmin/http-runner-from-s3:nginx1.14
 
 docker image build -t boldadmin/jar-runner-from-s3:11.0.1-jre ./jar-runner-from-s3/
 docker push boldadmin/jar-runner-from-s3:11.0.1-jre
