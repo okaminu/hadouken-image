@@ -1,4 +1,4 @@
-FROM openjdk:8u151-jre
+FROM openjdk:11.0.2-jre
 
 WORKDIR /srv
 RUN apt update
