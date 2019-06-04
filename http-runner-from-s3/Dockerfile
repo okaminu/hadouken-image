@@ -8,7 +8,7 @@ RUN chmod -R 500 /scripts/
 RUN chmod 500 /start.sh
 
 RUN apt update
-RUN apt install awscli=1.11.13-1 -y
+RUN apt install awscli=1.16.169-1 -y
 RUN apt install curl -y
 
 ENTRYPOINT ["/bin/sh", "/start.sh"]
