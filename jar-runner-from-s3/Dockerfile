@@ -7,6 +7,6 @@ RUN chmod -R 500 /scripts/
 RUN chmod 500 /start.sh
 
 RUN apt-get update
-RUN apt-get install awscli=1.16.26-1 -y
+RUN apt-get install awscli=1.11.13-1 -y
 
 ENTRYPOINT ["/bin/sh", "/start.sh"]
