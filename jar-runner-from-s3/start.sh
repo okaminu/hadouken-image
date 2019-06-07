@@ -2,7 +2,7 @@
 
 if [ "$SSL" = true ]
 then
-    sh /scripts/copy-cert.sh
+    sh /scripts/import-cert.sh
 fi
 sh /scripts/launch-jar.sh
 
