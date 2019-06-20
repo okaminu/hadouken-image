@@ -1,8 +1,9 @@
-FROM alpine
+FROM alpine:3.9
 
-RUN apk add --update git
+RUN apk update
+RUN apk add git
 RUN apk add openssh-client
-RUN apk add --update mongodb netcat-openbsd
+RUN apk add mongodb=4.0.5-r0 netcat-openbsd
 
 COPY ./checkout-git.sh /
 COPY ./wait-for-mongo.sh /
