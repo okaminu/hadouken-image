@@ -1,7 +1,12 @@
 FROM openjdk:11.0.1-jre
 
 WORKDIR /srv
-RUN apt update
-RUN apt install awscli=1.16.26-1 -y
+COPY ./scripts /scripts
+COPY ./start.sh /
+RUN chmod -R 500 /scripts/
+RUN chmod 500 /start.sh
 
-ENTRYPOINT bash -c "aws s3 cp $APP_URL ./app.jar && java -jar ./app.jar"
+RUN apt-get update
+RUN apt-get install awscli=1.11.13-1 -y
+
+ENTRYPOINT ["/bin/sh", "/start.sh"]
