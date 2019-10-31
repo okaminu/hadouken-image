@@ -1,4 +1,4 @@
-FROM openjdk:11.0.5-jre-stretch
+FROM openjdk:11.0.3-jre
 
 WORKDIR /srv
 COPY ./scripts /scripts
