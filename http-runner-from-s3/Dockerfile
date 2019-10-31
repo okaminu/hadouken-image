@@ -1,4 +1,4 @@
-FROM nginx:1.16
+FROM nginx:1.17.5
 
 COPY default.conf /
 COPY default-ssl.conf /
@@ -7,8 +7,10 @@ COPY ./start.sh /
 RUN chmod -R 500 /scripts/
 RUN chmod 500 /start.sh
 
-RUN apt-get update
-RUN apt-get install awscli=1.11.13-1 -y
-RUN apt-get install curl -y
+
+RUN apt-get update \
+    && apt-get -y install --no-install-recommends \
+    awscli=1.16.113-1 curl \
+    && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/bin/sh", "/start.sh"]
