@@ -1,4 +1,4 @@
-FROM openjdk:11.0.3-jre
+FROM openjdk:11.0.4-jre
 
 WORKDIR /srv
 COPY ./scripts /scripts
