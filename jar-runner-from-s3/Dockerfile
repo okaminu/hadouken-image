@@ -1,4 +1,4 @@
-FROM openjdk:11.0.4-jre
+FROM adoptopenjdk/openjdk11:jre-11.0.9.1_1-debian
 
 WORKDIR /srv
 COPY ./scripts /scripts
@@ -8,7 +8,7 @@ RUN chmod 500 /start.sh
 
 RUN apt-get update \
     && apt-get -y install --no-install-recommends \
-    awscli=1.11.13-1 \
+    awscli=1.16.113-1 \
     && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/bin/sh", "/start.sh"]
